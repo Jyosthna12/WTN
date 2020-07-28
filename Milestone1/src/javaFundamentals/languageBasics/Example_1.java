@@ -1,4 +1,4 @@
-package patterns;
+package javaFundamentals.languageBasics;
 
 public class Example_1 {
 	 public static void main(String args[])
