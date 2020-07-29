@@ -1,5 +1,11 @@
 package abstraction.interfaces.music.string;
 
-public class Veena {
 
-}
+	import abstraction.interfaces.music.*;
+
+	public class Veena implements Playable {
+		public void play() {
+			System.out.println("Playing Veena");
+		}
+	}
+
