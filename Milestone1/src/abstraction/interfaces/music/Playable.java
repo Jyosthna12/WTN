@@ -1,5 +1,5 @@
 package abstraction.interfaces.music;
 
-public class String {
+public class Playable {
 
 }
