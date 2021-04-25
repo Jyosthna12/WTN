@@ -154,44 +154,44 @@ public class HelloWorld
      {
          boolean c=false;
         //check horizontally
-        if(a[0]==a[1] && a[1]==a[2] && a[0]!=0 && a[0]==p)
+        if(a[0]==a[1] && a[1]==a[2] &&  a[0]==p)//
         {
             c=true;
             
         }
-        else if(a[3]==a[4] && a[4]==a[5] && a[3]!=0 && a[3]==p)
+        else if(a[3]==a[4] && a[4]==a[5] &&  a[3]==p)
         {
             c=true;
 
         }
-        else if(a[6]==a[7] && a[7]==a[8] && a[6]!=0 && a[6]==p)
+        else if(a[6]==a[7] && a[7]==a[8] &&  a[6]==p)
         {
             c=true;
           
         }
         //check vertically
-        else if(a[0]==a[3] && a[3]==a[6] && a[0]!=0 && a[0]==p)
+        else if(a[0]==a[3] && a[3]==a[6] &&  a[0]==p)
         {
             c=true;
            
         }
-        else if(a[1]==a[4] && a[4]==a[7] && a[1]!=0 && a[1]==p)
+        else if(a[1]==a[4] && a[4]==a[7] && a[1]==p)
         {
             c=true;
             
         }
-        else if(a[2]==a[5] && a[5]==a[8] && a[2]!=0 && a[2]==p)
+        else if(a[2]==a[5] && a[5]==a[8] && a[2]==p)
         {
             c=true;
             
         }
         //check diagonally
-        else if(a[0]==a[4] && a[4]==a[8] && a[0]!=0 && a[0]==p)
+        else if(a[0]==a[4] && a[4]==a[8] &&  a[0]==p)
         {
             c=true;
            
         }
-        else if(a[2]==a[4] && a[4]==a[6] && a[2]!=0 && a[2]==p)
+        else if(a[2]==a[4] && a[4]==a[6] && a[2]==p)
         {
             c=true;
             
