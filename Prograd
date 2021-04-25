@@ -1,0 +1,201 @@
+import java.util.*;
+public class HelloWorld
+{
+    static int[] a=new int[9];
+    static int limit=0;
+     public static void main(String []args)
+     {
+        Scanner s=new Scanner(System.in);
+        for(int i=0;i<9;i++)
+        {
+            a[i]=0;
+        }
+        for(int i=0;i<9;i++)
+        {
+            int p=0;
+            if(i%2==0)
+            {
+                System.out.println("PLAYER 1: ENTER YOUR BOX NUMBER: ");
+            }
+             else
+            {
+                System.out.println("PLAYER 2: ENTER YOUR BOX NUMBER: ");
+            }
+            
+            int k=s.nextInt();
+          //  System.out.println(k);
+            switch(k)//check where the player choose to mark
+            {
+                case(0):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(1):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(2):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(3):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(4):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(5):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(6):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(7):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                case(8):
+                    {
+                        if(a[k]==0)
+                        {
+                            a[k]=s.nextInt();
+                            p=a[k];
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        System.out.println("Wrong selection");
+                        break;
+                    }
+                    
+            }
+            limit++;
+            //display the maze after every turn
+            System.out.println("TURN "+limit);
+            display(a);
+            if(check(a,p))
+            //check if the player wins after their turn
+            //if yes, then print and stop playing
+            //else, continue
+            {
+                System.out.println("PLAYER "+ p+ " WINS");
+               
+                break;
+            }
+        }
+        if(limit==9)
+        //if the maximum number of turns are reached and there is no result ,it is a draw match
+        {
+            System.out.println("DRAW MATCH ");
+        }
+        
+     }
+     public static void display(int a[])
+     {
+         int g=0;
+        for(int i=0;i<9;i++)
+        {
+            System.out.print("| "+a[i]+" | ");
+            g++;
+            if(g==3)
+            {
+                System.out.println();
+               
+                g=0;
+            }
+        }
+     }
+     public static boolean check(int a[], int p)
+     {
+         boolean c=false;
+        //check horizontally
+        if(a[0]==a[1] && a[1]==a[2] && a[0]!=0 && a[0]==p)
+        {
+            c=true;
+            
+        }
+        else if(a[3]==a[4] && a[4]==a[5] && a[3]!=0 && a[3]==p)
+        {
+            c=true;
+
+        }
+        else if(a[6]==a[7] && a[7]==a[8] && a[6]!=0 && a[6]==p)
+        {
+            c=true;
+          
+        }
+        //check vertically
+        else if(a[0]==a[3] && a[3]==a[6] && a[0]!=0 && a[0]==p)
+        {
+            c=true;
+           
+        }
+        else if(a[1]==a[4] && a[4]==a[7] && a[1]!=0 && a[1]==p)
+        {
+            c=true;
+            
+        }
+        else if(a[2]==a[5] && a[5]==a[8] && a[2]!=0 && a[2]==p)
+        {
+            c=true;
+            
+        }
+        //check diagonally
+        else if(a[0]==a[4] && a[4]==a[8] && a[0]!=0 && a[0]==p)
+        {
+            c=true;
+           
+        }
+        else if(a[2]==a[4] && a[4]==a[6] && a[2]!=0 && a[2]==p)
+        {
+            c=true;
+            
+        }
+        return c;
+     }
+}
